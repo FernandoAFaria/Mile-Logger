@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell');
+*,
+*:before,
+*:after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Cantarell', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.login-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: block;
+}
+
+.slant {
+    position: fixed;
+    width: 100vw;
+    height: 150vh;
+    background-image: linear-gradient(rgba(108, 92, 231, .90), rgba(132, 0, 255, 0.925)), url('./driving.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: skewY(-30deg) translateY(-45%);
+}
+
+#main_mile_logger {
+    opacity: 0;
+}
+
+.spinner {
+    position: fixed;
+    display: none;
+    width: 120px;
+    height: 120px;
+    border: 10px solid rgb(0, 0, 0);
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translatey(-50%);
+    border-radius: 30%;
+    transform: translateZ(1px);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.navbar {
+    position: relative;
+    z-index: 11;
+    width: 100vw;
+    height: 75px;
+    padding: 0 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 25px;
+    transition: all .3s;
+    width: 95px;
+    height: 25px;
+    font-size: 1.2rem;
+}
+
+.navbar ul li:hover {
+    font-weight: bolder;
+}
+
+.login-body {
+    position: relative;
+    z-index: 12;
+    text-align: center;
+    color: white;
+    font-size: 1.8vw;
+}
+
+.login-form {
+    max-width: 600px;
+    min-height: 625px;
+    background: white;
+    color: black;
+    margin: 75px 75px;
+    border-radius: 5px;
+    box-shadow: .1rem .2rem .3rem rgba(45, 45, 45, .45);
+    padding: 25px;
+    text-align: left;
+    position: relative;
+    min-width: 575px;
+}
+
+.login-body h2 {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(53, 53, 53);
+    display: inline-block;
+    border: 1px solid #eee;
+    border-bottom: none;
+    width: 120px;
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+.login_register {
+    margin-bottom: 50px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.login_register .active {
+    background: #eee;
+}
+
+.login-form label {
+    font-size: 1rem;
+}
+
+.login-form input {
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 55px;
+    font-size: 1.4rem;
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.login-form .btn-login {
+    position: absolute;
+    background: #55efc4;
+    width: 225px;
+    height: 55px;
+    border-radius: 50px;
+    left: 50%;
+    margin-top: 50px;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: white;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-mockup {
+    position: relative;
+}
+
+.login-mockup img {
+    width: 625px;
+    height: auto;
+}
+
+header {
+    min-height: 30vh;
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('./bmw.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*General styling */
+
+#insert-form input {
+    width: 10rem;
+    height: 2.2rem;
+    border: 1px solid lightgray;
+    padding-left: 5px;
+    color: grey;
+}
+
+#insert-form select {
+    background: white;
+    border: 1px solid lightgray;
+    padding: .51rem .55rem;
+    color: grey;
+}
+
+table {
+    width: 99.5%;
+    overflow-x: hidden;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background: #eee;
+}
+
+table tr td span {
+    margin-left: 15px;
+}
+
+table tr td {
+    height: 35px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.container {
+    padding: 15px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.color-white {
+    color: white;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mx-1 {
+    margin: 1rem;
+}
+
+.mx-2 {
+    margin: 2rem;
+}
+
+.bx-1 {
+    border: 1px solid lightgray;
+}
+
+.btn {
+    background: lightgray;
+    padding: .4rem 1.8rem;
+    cursor: pointer;
+    transition: all .2s;
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.saved {
+    opacity: 0;
+    position: fixed;
+    bottom: 25px;
+    font-size: 3rem;
+    color: rgb(45, 45, 45);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 2s;
+}
+
+.btn-sm {
+    padding: 2px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #ff0037;
+    opacity: 0;
+    transition: all .3s;
+    color: white;
+    font-weight: 400;
+}
+
+#total__miles {
+    display: inline-block;
+    transform: translatex(30px);
+    transition: transform .3s;
+}
+
+table #root_data tr:hover {
+    background: rgb(70, 70, 70);
+    color: white;
+}
+
+.btn-remove {
+    position: relative;
+    z-index: 1;
+    width: 135px;
+    transition: all .2s;
+}
+
+table #root_data tr:hover .btn-sm {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+table #root_data tr:hover #total__miles {
+    transform: translatex(0);
+}
+
+.btn-primary {
+    color: white;
+    background: #00a8ff;
+}
+
+.btn-secondary {
+    color: white;
+    background: #4cd137;
+}
+
+.btn-warning {
+    color: white;
+    background: #fbc531;
+}
+
+.btn-danger {
+    color: white;
+    background: #e84118;
+}
+
+.error {
+    font-size: 1rem;
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+}
+
+.btn-info {
+    color: white;
+    background: #9c88ff
+}
+
+.btn:hover {
+    box-shadow: .2rem .1rem .2rem rgba(0, 0, 0, .2)
+}
+
+/*Specific Styling */
+.forget-link {
+    display: inline-block;
+    font-size: .8rem;
+    float: right;
+    cursor: pointer;
+    
+}
+.current_trip_miles {
+    display: inline-block;
+    width: 75px;
+    height: 2.12rem;
+    color: grey;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-top: 4px;
+    background: rgb(255, 255, 255);
+    transform: translateY(1px);
+}
+
+.insert_mileage {
+    background: #eee;
+}
+
+.total {
+    float: right;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:1000px) {
+    table {
+        font-size: .9rem;
+    }
+    .login-mockup {
+        display: none;
+    }
+}
+
+@media screen and (max-width:950px) {
+    table {
+        font-size: .8rem;
+    }
+    .login-form {
+        width: 90vw;
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    table {
+        font-size: .7rem;
+    }
+    #insert-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+    input,
+    .btn,
+    select,
+    .current_trip_miles {
+        margin-bottom: 10px;
+    }
+    #insert-form input {
+        width: 220px;
+    }
+}

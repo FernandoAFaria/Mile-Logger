@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="robots" content="index, follow" />
+        <meta
+            name="og:FreeMileLog"
+            property="og:window"
+            content="Free Mileage Log"
+        />
+        <meta
+            name="Keywords"
+            content="Mile, Mileage, Log, logger, mile log, free mile, free, Uber, Lyft, Amazon Flex, Delivery log"
+        />
+        <meta
+            name="Description"
+            content="Free Mileage Logger for Uber, Lyft, or other delivery services"
+        />
+        <title>Free Mileage Logger</title>
+    </head>
+    <body id="render">
+        <!-- Login Screen -->
+        <div class="login-menu">
+            <div class="slant"></div>
+            <div class="navbar">
+                <ul>
+                    <li id="nav_register">Register</li>
+                    <li id="nav_login">Login</li>
+                </ul>
+            </div>
+            <div class="login-body">
+                <h1>Mileage Logger Free</h1>
+                <div class="login-container">
+                    <div class="login-form">
+                        <div class="login_register">
+                            <h2 id="login_form_switch" class="active">Login</h2>
+                            <h2 style="" id="register_form_switch">Register</h2>
+                        </div>
+
+                        <label for="email">Email*</label><br />
+                        <input type="email" id="email" name="email" /><br />
+                        <label for="password">Password*</label>
+                        <div class='forget-link'><a href="forgot.html">forgot your password?</a></div>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                        />
+                        <button id="login_button" class="btn btn-login">Login</button>
+                    
+                      
+                        <div id="error" class="error"></div>
+                        
+                    </div>
+
+                    <div class="login-mockup">
+                           <div> Phone and Tablet Friendly</div>
+                        <img
+                            id="exampleview"
+                            src=""
+                            alt="phone and tablet view"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="spinner"></div>
+        <div id="main_mile_logger">
+            <header>
+                <div class="container flex-center flex-column  color-white">
+                    <h1>Mileage Logger</h1>
+                    <h3 class="mx-2">Total Miles:</h3>
+                    <h2 class="btn btn-info all_total_miles">0</h2>
+                </div>
+            </header>
+            <div class="insert_mileage bx-1 container flex-center flex-row">
+                <form id="insert-form">
+                    <select name="vehicle" id="vehicle">
+                        <option value="Car#1" default>Car#1</option>
+                        <option value="Car#2" default>Car#2</option>
+                        <option value="Van" default>Van</option>
+                        <option value="Truck">Truck</option>
+                    </select>
+                    <input
+                        name="tripType"
+                        id="tripType"
+                        value="Delivery/Uber/Lyft"
+                    />
+                    <input type="date" name="date" id="date" required />
+                    <input
+                        type="number"
+                        id="start"
+                        placeholder="Starting Mileage"
+                        required
+                    />
+                    <input
+                        type="number"
+                        id="end"
+                        placeholder="Ending Mileage"
+                        required
+                    />
+                    <div class="current_trip_miles bx-1">0</div>
+                    <button class="btn btn-secondary insert__trip">
+                        Submit
+                    </button>
+                    <button class="btn btn-primary print__trips">
+                        Print All
+                    </button>
+                </form>
+            </div>
+            <div class="allTrips container">
+                <table>
+                    <thead>
+                        <th>Vehicle</th>
+                        <th>
+                            <span style="padding: 2px 4px"
+                                >(newest on top)
+                            </span>
+                            Date
+                        </th>
+                        <th>Type</th>
+                        <th>Starting Miles</th>
+                        <th>Ending Miles</th>
+                        <th>Total Miles</th>
+                    </thead>
+                    <tbody id="root_data"></tbody>
+                </table>
+                <div class="total btn-danger">
+                    Total Miles Driven: <span class="all_total_miles">0</span>
+                </div>
+                <div class="saved">SAVED...</div>
+            </div>
+        </div>
+    <script type="text/javascript" src="bundle.js"></script></body>
+</html>
