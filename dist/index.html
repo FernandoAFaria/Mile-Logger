@@ -21,6 +21,12 @@
         <title>Free Mileage Logger</title>
     </head>
     <body id="render">
+            <script>
+                    function logOut(){
+                        window.location.reload();
+                     
+                    }
+            </script>
         <!-- Login Screen -->
         <div class="login-menu">
             <div class="slant"></div>
@@ -38,7 +44,7 @@
                             <h2 id="login_form_switch" class="active">Login</h2>
                             <h2 id="register_form_switch">Register</h2>
                         </div>
-
+<div class="form-entry">
                         <label for="email">Email*</label><br />
                         <input type="email" id="email" name="email" /><br />
                         <label for="password">Password*</label>
@@ -48,11 +54,13 @@
                             id="password"
                             name="password"
                         />
-                        <button id="login_button" class="btn btn-login">Login</button>
+                    </div>
+                    <div class="login-btn-wrap">
+                        <button id="login_button" onclick="logOut();" class="btn btn-login">Login</button>
                     
                       
                         <div id="error" class="error"></div>
-                        
+                    </div>
                     </div>
 
                     <div class="login-mockup">
@@ -74,6 +82,7 @@
                     <h1>Mileage Logger</h1>
                     <h3 class="mx-2">Total Miles:</h3>
                     <h2 class="btn btn-info all_total_miles">0</h2>
+                    <button style="margin-top: 1rem;" onclick="logOut()" class="btn btn-danger">Logout</button>
                 </div>
             </header>
             <div class="insert_mileage bx-1 container flex-center flex-row">
@@ -134,5 +143,6 @@
                 <div class="saved">SAVED...</div>
             </div>
         </div>
+        
     <script type="text/javascript" src="bundle.js"></script><script type="text/javascript" src="bundle.js"></script></body>
 </html>

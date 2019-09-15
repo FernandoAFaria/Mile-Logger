@@ -13,6 +13,7 @@ html {
     font-family: 'Cantarell', sans-serif;
 }
 
+
 body {
     width: 100vw;
     height: 100vh;
@@ -28,6 +29,10 @@ body {
     background: white;
     display: block;
     
+}
+.login-btn-wrap {
+    height: 150px;
+    position: relative;
 }
 
 .slant {
