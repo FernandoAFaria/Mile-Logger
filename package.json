@@ -23,7 +23,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bcrypt": "^3.0.5",
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
